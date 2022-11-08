@@ -1,0 +1,121 @@
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: start;
+
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-product-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.cart-product-price {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0.25rem 0;
+}
+
+.cart-left > :first-child {
+    margin-bottom: 0.25rem;
+}
+
+.cart-left {
+    flex-grow: 1;
+}
+
+.cart-right{
+    width: 7.563rem;
+    flex-shrink: 1;
+}
+
+.cart-right  > img{
+    max-width: 100%;
+}
+
+.cart-product {
+    display: flex;
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.cart-product > :not(:last-child) {
+    margin-right: 1rem;
+}
+
+.cart-middle > h2 {
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.cart-middle > div {
+    font-weight: bold;
+    font-size: 0.5rem;
+    border: black 1.5px solid;
+    padding: 0.5rem;
+
+}
+
+.cart-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+}
+
+.attrTextCart {
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.textattrcart {
+    border: black 2px solid;
+    margin-right: 0.625rem;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.875rem;
+    width: 1.5rem;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+.textattrcart.active {
+    background-color: black;
+    color: white;
+}
+
+.textcart {
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+.swatchattrcart {
+    background-color: #D3D2D5;
+    padding: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.swatchattrcart.active {
+    border: 1px solid #5ECE7B;
+}
+
+.swatchcart {
+    display: flex;
+    flex-direction: row;
+}

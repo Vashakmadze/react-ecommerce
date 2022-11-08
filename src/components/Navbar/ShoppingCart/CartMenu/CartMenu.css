@@ -1,0 +1,90 @@
+/* Remove scrollbar */
+::-webkit-scrollbar {
+    width: 10px;  
+    background-color: transparent;  
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #237337; 
+  }
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5ECE7B; 
+  }
+
+.dropdown-cart {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    overflow: hidden;
+    z-index: 100;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    display: inline-block;
+    max-height: 40rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-color: red red;
+}
+
+.cart-header {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 2rem 1rem; 
+
+}
+
+.cart-header span {
+    font-weight: 400;
+}
+
+.cart-footer {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.total-text {
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+.total-amount {
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.cart-buttons {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.view-bag {
+    padding: 0.75rem 1.25rem;
+    border: black 2px solid;
+}
+
+.check-out {
+    padding: 0.75rem 1.25rem;
+    color: white;
+    background-color: #5ECE7B;
+}
+
+.none {
+    display: none;
+}

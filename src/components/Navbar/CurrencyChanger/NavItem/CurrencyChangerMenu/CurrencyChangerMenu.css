@@ -1,0 +1,11 @@
+.CurrencyChangerMenu {
+
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
