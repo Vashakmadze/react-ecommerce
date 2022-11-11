@@ -3,17 +3,15 @@ import Navbar from "./components/Navbar/Navbar"
 import Products from "./components/products/products"
 import { useEffect, useState, useRef } from 'react';
 import { useQuery, useSubscription } from "@apollo/client";
-import { GET_TECH_CAT } from "./gql/Queries";
-import { GET_CLOTHES_CAT } from "./gql/Queries";
-import { GET_ALL_CAT } from "./gql/Queries";  
+import { GET_TECH_CAT, GET_CLOTHES_CAT,  GET_ALL_CAT} from "./gql/Queries";
 import { Routes, Route, Navigate} from "react-router-dom"
 import ProductDetailPage from './components/ProductDetailPage/ProductDetailPage';
-import {calculateAmount} from "./constructors/functions";
 import Bag from "./components/Bag/Bag";
 
 
 function App() {
 
+  //transfor mentire application into class component
 
   //state for cart
   const [open, setOpen] = useState(false);
@@ -87,7 +85,7 @@ function App() {
     queryForDataCat = GET_TECH_CAT
   }
   
-  const { data, loading, error } = useQuery(queryForDataCat);
+  const { data, loading, error } = useQuery(queryForDataCat); // TICK
   if (loading) return "Loading...";
   if (error) return <pre>{error.message}</pre>
 
@@ -123,7 +121,7 @@ function App() {
     <div className="App">
       <Navbar genProps={genProps} openStateManagement={openStateManagement} cartStateManagement={cartStateManagement} dropdownProp={dropdownProp} cartProp={cartProp}/>
       <Routes>
-        <Route index path="/:name" element={<Products genProps={genProps} openStateManagement={open}/>}></Route>
+        <Route index path="/:name" element={<Products genProps={genProps} openStateManagement={open} cartStateManagement={cartStateManagement}/>}></Route>
         <Route path="/cart" element={<Bag openStateManagement={openStateManagement} cartStateManagement={cartStateManagement} genProps={genProps}/>}></Route>
         <Route path="/products/:id" element={<ProductDetailPage genProps={genProps} openStateManagement={openStateManagement} cartStateManagement={cartStateManagement}/>}></Route>
         <Route path="*" element={<Navigate to="/all" replace />} />

@@ -89,6 +89,7 @@
 
 .images-div {
     width: 12.5rem;
+    position: relative;
 }
 
 .images-div > img {
@@ -114,4 +115,25 @@
     border: black 1.5px solid;
     padding: 0.5rem 0.75rem; 
     cursor: pointer;
+}
+
+.arrows-div > div {
+    background-color: black;
+    opacity: 73%;
+    display: inline-block;
+    margin: 0.5rem;
+
+}
+
+.arrows-div {
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    cursor: pointer;
+}
+
+.arrows-div > div > img {
+    margin: auto;
+    padding: 0.8rem 0.9rem 0.7rem 0.9rem;
 }

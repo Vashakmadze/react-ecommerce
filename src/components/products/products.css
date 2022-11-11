@@ -23,8 +23,8 @@ h4 {
     padding: .4rem;
     margin: 2rem 0;
     transition: .4s;
-    position: relative;
     flex-basis: 25%;
+    position: relative;
 }
 
 .product:hover {
@@ -75,6 +75,7 @@ a {
     text-decoration: none;
     color: black;
 }
+
 
 
 

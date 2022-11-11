@@ -1,6 +1,9 @@
 import React from 'react';
 import { findCurrencySymbol, findAmount, calculateAmount, removeFromArray, compareObjects} from "../../../constructors/functions";
 import './BagItem.css';
+import right from "../../../assets/right.png";
+import left from "../../../assets/left.png"
+
 
 // fix bag page price not updating
 
@@ -14,10 +17,10 @@ class BagItem extends React.Component {
     this.props = props;
     this.symbol = findCurrencySymbol(this.product.prices, this.props.genProps.currencyLabel);
     this.state = { 
+      imageIndex: 0,
       symbol: findCurrencySymbol(this.product.prices, this.props.genProps.currencyLabel),
       quantity: props.product.quantity,
       productStates : {
-        image: this.product.image[0],
         color: this.product.attributes.color,
         size: this.product.attributes.size,
         capacity: this.product.attributes.capacity,
@@ -25,6 +28,22 @@ class BagItem extends React.Component {
         touchid: this.product.attributes.touchid
       }
    };
+  }
+
+  moveRigth = () => {
+    if(this.state.imageIndex === this.product.image.length - 1) {
+      this.setState({imageIndex: 0});
+    } else {
+      this.setState({imageIndex: this.state.imageIndex + 1});
+    }
+  }
+
+  moveLeft = () => {
+    if(this.state.imageIndex === 0) {
+      this.setState({imageIndex: this.product.image.length - 1});
+    } else {
+      this.setState({imageIndex: this.state.imageIndex - 1});
+    }
   }
 
   increaseQuantity = () => {
@@ -138,7 +157,18 @@ class BagItem extends React.Component {
             <div className='quantity-decrease-bag' onClick={() => this.decreaseQuantity()}>-</div>
         </div>
         <div className='images-div'>
-          <img src={this.state.productStates.image} />
+          <img src={this.product.image[this.state.imageIndex]} />
+          {
+            this.product.image.length > 1 && 
+            <div className='arrows-div'>
+              <div className='left-arrow' onClick={this.moveLeft}>
+                <img src={left} alt="Left Arrow" title='Left Arrow'/>
+              </div>
+              <div className='rigth-arrow' onClick={this.moveRigth}>
+                <img src={right} alt="Right Arrow" title="Right Arrow"/>
+              </div>
+          </div>
+          }
         </div>
       </div>
     </div>  
