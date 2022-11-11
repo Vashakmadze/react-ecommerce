@@ -1,4 +1,8 @@
 # Getting Started with Create React App
+Ecommerce application created using React. The application functions based on React Hooks, Apollo Client and Graphql Endpoint. Download the endpoint build it and run it along with the React App.
+
+![GIF SHOWCASE](https://github.com/Vashakmadze/memegenerator/blob/main/Meme%20Generator%20gif.gif "WEBSITE SHOWCASE")
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
